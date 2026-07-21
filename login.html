@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-box">
+
+    <h2>Entrar</h2>
+
+    <input
+        id="email"
+        class="input"
+        placeholder="Email"
+    >
+
+    <input
+        id="senha"
+        type="password"
+        class="input"
+        placeholder="Senha"
+    >
+
+    <button
+        class="btn-login"
+        onclick="login()">
+
+        Entrar
+
+    </button>
+
+</div>
+
+<script type="module" src="firebase/auth.js"></script>
+
+</body>
+</html>
