@@ -1,0 +1,868 @@
+/* ==========================================
+   ANIMAÇÕES PREMIUM
+   CAVALOS PREMIUM
+========================================== */
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-animation{
+
+    animation:
+    logoFloat 5s ease-in-out infinite;
+
+}
+
+
+@keyframes logoFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+
+
+
+/* ==========================================
+   HERO ENTRADA
+========================================== */
+
+
+.hero-content{
+
+    opacity:0;
+
+    animation:
+    heroEntrance 1.5s ease forwards;
+
+    animation-delay:.3s;
+
+}
+
+
+
+@keyframes heroEntrance{
+
+
+from{
+
+    opacity:0;
+
+    transform:
+    translateY(60px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* ==========================================
+   VIDEO CINEMÁTICO
+========================================== */
+
+
+.hero-video{
+
+
+animation:
+
+cinemaZoom 25s ease-in-out infinite alternate;
+
+
+}
+
+
+
+@keyframes cinemaZoom{
+
+
+from{
+
+transform:
+scale(1);
+
+}
+
+
+
+to{
+
+transform:
+scale(1.08);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   BOTÕES PREMIUM
+========================================== */
+
+
+.btn-animation,
+.btn-primary,
+.btn-gold{
+
+
+position:relative;
+
+overflow:hidden;
+
+transition:
+
+all .4s ease;
+
+
+}
+
+
+
+
+
+.btn-primary:hover,
+.btn-gold:hover{
+
+
+transform:
+
+translateY(-5px)
+scale(1.04);
+
+
+box-shadow:
+
+0 20px 50px
+rgba(234,179,8,.35);
+
+
+}
+
+
+
+
+
+
+.btn-primary::before,
+.btn-gold::before{
+
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:80%;
+
+height:100%;
+
+
+background:
+
+linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.5),
+transparent
+);
+
+
+transition:.6s;
+
+
+}
+
+
+
+
+
+.btn-primary:hover::before,
+.btn-gold:hover::before{
+
+
+left:120%;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+
+.horse-card,
+.luxury-card,
+.card-premium{
+
+
+opacity:0;
+
+
+transform:
+
+translateY(70px);
+
+
+transition:
+
+opacity 1s ease,
+transform 1s ease;
+
+
+}
+
+
+
+
+.horse-card.active,
+.luxury-card.active,
+.card-premium.active{
+
+
+opacity:1;
+
+
+transform:
+
+translateY(0);
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   HOVER CARD 3D
+========================================== */
+
+
+.horse-card,
+.luxury-card{
+
+
+transition:
+
+transform .4s ease,
+box-shadow .4s ease;
+
+
+}
+
+
+
+.horse-card:hover,
+.luxury-card:hover{
+
+
+box-shadow:
+
+0 30px 70px
+rgba(234,179,8,.20);
+
+
+border-color:
+
+#eab308;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   IMAGEM DOS CAVALOS
+========================================== */
+
+
+.horse-card img{
+
+
+transition:
+
+transform 1s ease;
+
+
+}
+
+
+
+.horse-card:hover img{
+
+
+transform:
+
+scale(1.12);
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   TEXTO DOURADO ANIMADO
+========================================== */
+
+
+.gold-animation{
+
+
+background:
+
+linear-gradient(
+90deg,
+#fff,
+#eab308,
+#fff
+);
+
+
+background-size:
+
+200% auto;
+
+
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+
+
+-webkit-text-fill-color:transparent;
+
+color:transparent;
+
+
+
+animation:
+
+goldMove 5s linear infinite;
+
+
+}
+
+
+
+
+@keyframes goldMove{
+
+
+0%{
+
+background-position:
+
+0% center;
+
+}
+
+
+
+100%{
+
+background-position:
+
+200% center;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+
+.scroll-left{
+
+
+opacity:0;
+
+transform:
+
+translateX(-80px);
+
+transition:
+
+1s ease;
+
+
+}
+
+
+
+.scroll-right{
+
+
+opacity:0;
+
+transform:
+
+translateX(80px);
+
+transition:
+
+1s ease;
+
+
+}
+
+
+
+.scroll-up{
+
+
+opacity:0;
+
+transform:
+
+translateY(80px);
+
+transition:
+
+1s ease;
+
+
+}
+
+
+
+
+
+.scroll-left.active,
+.scroll-right.active,
+.scroll-up.active{
+
+
+opacity:1;
+
+
+transform:
+
+translate(0);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   FLOAT ELEMENTS
+========================================== */
+
+
+.animate-float{
+
+
+animation:
+
+floating 4s ease-in-out infinite;
+
+
+}
+
+
+
+@keyframes floating{
+
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+
+50%{
+
+transform:
+translateY(-12px);
+
+}
+
+
+100%{
+
+transform:
+translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   WHATSAPP
+========================================== */
+
+
+.whatsapp-button{
+
+
+animation:
+
+whatsappPulse 2s infinite;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.whatsapp-button:hover{
+
+
+transform:
+
+scale(1.15);
+
+
+}
+
+
+
+
+@keyframes whatsappPulse{
+
+
+0%{
+
+
+box-shadow:
+
+0 0 0 0
+rgba(234,179,8,.7);
+
+
+}
+
+
+70%{
+
+
+box-shadow:
+
+0 0 0 25px
+rgba(234,179,8,0);
+
+
+}
+
+
+100%{
+
+
+box-shadow:
+
+0 0 0 0
+rgba(234,179,8,0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   BRILHO PREMIUM
+========================================== */
+
+
+.gold-glow{
+
+
+animation:
+
+goldGlow 3s infinite;
+
+
+}
+
+
+
+@keyframes goldGlow{
+
+
+0%,100%{
+
+
+filter:
+
+drop-shadow(
+0 0 0 transparent
+);
+
+
+}
+
+
+
+50%{
+
+
+filter:
+
+drop-shadow(
+0 0 18px #eab308
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   LOADER
+========================================== */
+
+
+.loader-logo{
+
+
+animation:
+
+loaderPulse 2s infinite;
+
+
+}
+
+
+
+@keyframes loaderPulse{
+
+
+0%,100%{
+
+opacity:.8;
+
+transform:
+scale(1);
+
+}
+
+
+
+50%{
+
+opacity:1;
+
+transform:
+scale(1.05);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   MENU MOBILE
+========================================== */
+
+
+#mobileMenu{
+
+
+animation:
+
+menuOpen .4s ease;
+
+
+}
+
+
+
+@keyframes menuOpen{
+
+
+from{
+
+opacity:0;
+
+transform:
+translateY(-20px);
+
+
+}
+
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+
+@media(max-width:768px){
+
+
+
+.hero-content{
+
+
+animation-duration:
+
+1.2s;
+
+
+}
+
+
+
+.horse-card,
+.luxury-card{
+
+
+transform:
+
+translateY(40px);
+
+
+}
+
+
+
+.hero-video{
+
+
+animation-duration:
+
+35s;
+
+
+}
+
+
+
+}
