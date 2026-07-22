@@ -9,15 +9,15 @@
 
 
 <title>
-Gestor Haras | Cavalos Premium
+Cavalos Premium à Venda | Gestor Haras
 </title>
 
 
 <meta name="description"
 content="
-Marketplace premium de cavalos.
-Animais selecionados, genética superior,
-reprodutores e matrizes de alto padrão.
+Compre cavalos premium selecionados.
+Animais com genética superior,
+registro, fotos e informações completas.
 ">
 
 
@@ -39,8 +39,6 @@ rel="stylesheet">
 
 
 
-<!-- CSS -->
-
 <link rel="stylesheet" href="css/style.css">
 
 <link rel="stylesheet" href="css/animations.css">
@@ -54,16 +52,16 @@ rel="stylesheet">
 <style>
 
 
-/* ==========================
-RESET PREMIUM
-========================== */
+/* =========================
+BASE
+========================= */
 
 
 html{
 
 scroll-behavior:smooth;
 
-scroll-padding-top:110px;
+scroll-padding-top:120px;
 
 }
 
@@ -73,25 +71,23 @@ body{
 
 margin:0;
 
+padding-top:0;
+
 background:#050505;
 
-color:white;
+color:#fff;
 
 font-family:'Montserrat',sans-serif;
 
 overflow-x:hidden;
 
-padding-top:0;
-
 }
-
-
 
 
 
 section{
 
-scroll-margin-top:100px;
+scroll-margin-top:120px;
 
 }
 
@@ -99,9 +95,9 @@ scroll-margin-top:100px;
 
 
 
-/* ==========================
+/* =========================
 FONTES
-========================== */
+========================= */
 
 
 .title-font{
@@ -130,13 +126,12 @@ color:#d4af37;
 
 
 
-/* ==========================
-FUNDO HERO
-========================== */
+/* =========================
+HERO
+========================= */
 
 
 .hero-gradient{
-
 
 background:
 
@@ -144,14 +139,13 @@ linear-gradient(
 
 180deg,
 
-rgba(0,0,0,.25),
+rgba(0,0,0,.20),
 
-rgba(0,0,0,.55) 55%,
+rgba(0,0,0,.65) 60%,
 
 #050505 100%
 
 );
-
 
 }
 
@@ -159,15 +153,12 @@ rgba(0,0,0,.55) 55%,
 
 
 
-
-
-/* ==========================
-GLASS PREMIUM
-========================== */
+/* =========================
+GLASS
+========================= */
 
 
 .glass{
-
 
 background:
 
@@ -184,11 +175,9 @@ blur(25px);
 blur(25px);
 
 
-
 border:
 
-1px solid rgba(212,175,55,.18);
-
+1px solid rgba(212,175,55,.20);
 
 }
 
@@ -196,9 +185,9 @@ border:
 
 
 
-/* ==========================
+/* =========================
 BOTÕES
-========================== */
+========================= */
 
 
 .gold-button,
@@ -211,7 +200,7 @@ align-items:center;
 
 justify-content:center;
 
-padding:15px 35px;
+padding:16px 38px;
 
 border-radius:50px;
 
@@ -233,7 +222,9 @@ cursor:pointer;
 .btn-gold:hover{
 
 
-transform:translateY(-5px);
+transform:
+
+translateY(-5px);
 
 
 box-shadow:
@@ -256,20 +247,15 @@ align-items:center;
 
 justify-content:center;
 
-
-padding:15px 35px;
-
+padding:16px 38px;
 
 border-radius:50px;
-
 
 border:
 
 1px solid #d4af37;
 
-
 color:#d4af37;
-
 
 transition:.4s;
 
@@ -283,7 +269,6 @@ transition:.4s;
 
 background:#d4af37;
 
-
 color:#000;
 
 
@@ -295,9 +280,9 @@ color:#000;
 
 
 
-/* ==========================
-NAVBAR CORREÇÃO
-========================== */
+/* =========================
+NAVBAR
+========================= */
 
 
 #navbar{
@@ -309,7 +294,7 @@ linear-gradient(
 
 180deg,
 
-rgba(0,0,0,.85),
+rgba(0,0,0,.9),
 
 transparent
 
@@ -325,7 +310,7 @@ transparent
 
 background:
 
-rgba(0,0,0,.92);
+rgba(0,0,0,.95);
 
 
 backdrop-filter:
@@ -339,9 +324,9 @@ blur(20px);
 
 
 
-/* ==========================
+/* =========================
 IMAGENS CAVALOS
-========================== */
+========================= */
 
 
 .cavalo-img{
@@ -355,7 +340,7 @@ height:100%;
 object-fit:cover;
 
 
-object-position:center;
+object-position:center top;
 
 
 transition:
@@ -380,35 +365,34 @@ transform:scale(1.08);
 
 
 
-/* ==========================
-EVITAR CONTEÚDO ATRÁS
-DO MENU E FOOTER
-========================== */
+/* =========================
+CORREÇÃO MENU FOOTER
+========================= */
 
 
-#cavalos,
-#destaques,
-#contato{
+#navbar{
 
-
-position:relative;
-
-z-index:1;
-
+z-index:9999;
 
 }
-
-
 
 
 
 footer{
 
-
 position:relative;
 
 z-index:20;
 
+}
+
+
+
+section{
+
+position:relative;
+
+z-index:1;
 
 }
 
@@ -416,13 +400,14 @@ z-index:20;
 
 
 
-/* ==========================
+
+
+/* =========================
 MOBILE
-========================== */
+========================= */
 
 
 @media(max-width:768px){
-
 
 
 .title-font{
@@ -430,7 +415,6 @@ MOBILE
 letter-spacing:-1px;
 
 }
-
 
 
 .hero-gradient{
@@ -442,9 +426,9 @@ linear-gradient(
 
 180deg,
 
-rgba(0,0,0,.3),
+rgba(0,0,0,.35),
 
-rgba(0,0,0,.8)
+rgba(0,0,0,.9)
 
 );
 
@@ -452,17 +436,15 @@ rgba(0,0,0,.8)
 }
 
 
-
 }
+
 
 
 
 </style>
 
 
-
 </head>
-
 
 
 
@@ -475,10 +457,9 @@ rgba(0,0,0,.8)
 
 
 
-
-<!-- =================================
+<!-- =========================
 LOADER PREMIUM
-================================= -->
+========================= -->
 
 
 <div
@@ -499,7 +480,6 @@ justify-center
 <div class="text-center">
 
 
-
 <img
 
 src="assets/images/logo-dour.png"
@@ -511,8 +491,6 @@ mb-8
 "
 
 alt="Gestor Haras">
-
-
 
 
 
@@ -544,7 +522,6 @@ w-full
 
 
 
-
 <p
 
 class="
@@ -555,9 +532,7 @@ tracking-[8px]
 text-xs
 ">
 
-
-Excelência • Genética • Tradição
-
+Cavalos • Genética • Excelência
 
 </p>
 
@@ -576,9 +551,9 @@ Excelência • Genética • Tradição
 
 
 
-<!-- =================================
-NAVBAR PREMIUM
-================================= -->
+<!-- =========================
+NAVBAR
+========================= -->
 
 
 <header
@@ -590,7 +565,6 @@ fixed
 top-0
 left-0
 w-full
-z-[999]
 transition
 duration-500
 ">
@@ -611,9 +585,6 @@ justify-between
 
 
 
-
-
-<!-- LOGO -->
 
 
 <a href="index.html">
@@ -642,7 +613,6 @@ alt="Gestor Haras">
 
 
 
-<!-- MENU DESKTOP -->
 
 
 <div
@@ -663,9 +633,7 @@ tracking-[3px]
 
 href="#inicio"
 
-class="
-text-yellow-500
-">
+class="text-yellow-500">
 
 Início
 
@@ -679,12 +647,9 @@ Início
 
 href="#cavalos"
 
-class="
-hover:text-yellow-500
-transition
-">
+class="hover:text-yellow-500 transition">
 
-Plantel
+Cavalos à Venda
 
 </a>
 
@@ -696,12 +661,9 @@ Plantel
 
 href="#destaques"
 
-class="
-hover:text-yellow-500
-transition
-">
+class="hover:text-yellow-500 transition">
 
-Haras
+Destaques
 
 </a>
 
@@ -713,10 +675,7 @@ Haras
 
 href="#contato"
 
-class="
-hover:text-yellow-500
-transition
-">
+class="hover:text-yellow-500 transition">
 
 Contato
 
@@ -726,16 +685,11 @@ Contato
 
 
 
-
-
-
 <a
 
 href="https://gestor-haras-app-one.vercel.app/"
 
-class="
-gold-button
-">
+class="gold-button">
 
 Entrar
 
@@ -749,9 +703,6 @@ Entrar
 
 
 
-
-
-<!-- MOBILE BUTTON -->
 
 
 <button
@@ -770,17 +721,11 @@ text-4xl
 
 
 
-
-
 </nav>
 
 
 
 
-
-
-
-<!-- MENU MOBILE -->
 
 
 <div
@@ -791,7 +736,6 @@ class="
 hidden
 lg:hidden
 bg-black/95
-backdrop-blur-xl
 border-t
 border-neutral-800
 ">
@@ -818,26 +762,18 @@ Início
 </a>
 
 
-
-
 <a href="#cavalos">
 
-Plantel
+Cavalos
 
 </a>
-
-
-
 
 
 <a href="#destaques">
 
-Haras
+Destaques
 
 </a>
-
-
-
 
 
 <a href="#contato">
@@ -845,8 +781,6 @@ Haras
 Contato
 
 </a>
-
-
 
 
 
@@ -861,7 +795,6 @@ Entrar
 </a>
 
 
-
 </div>
 
 
@@ -869,9 +802,17 @@ Entrar
 
 
 </header>
-<!-- =================================
-HERO PREMIUM
-================================= -->
+
+
+
+
+
+
+
+
+<!-- =========================
+HERO VENDA DE CAVALOS
+========================= -->
 
 
 <section
@@ -885,25 +826,21 @@ flex
 items-center
 overflow-hidden
 pt-28
-md:pt-32
 ">
 
 
 
-
-
-<!-- VIDEO FUNDO -->
-
 <video
 
 autoplay
+
 muted
+
 loop
+
 playsinline
 
-poster="
-assets/images/haras/hero.jpg
-"
+poster="assets/images/haras/hero.jpg"
 
 class="
 absolute
@@ -911,15 +848,12 @@ inset-0
 w-full
 h-full
 object-cover
-object-center
 ">
 
 
 <source
 
-src="
-assets/videos/hero.mp4
-"
+src="assets/videos/hero.mp4"
 
 type="video/mp4">
 
@@ -930,9 +864,6 @@ type="video/mp4">
 
 
 
-
-<!-- SOMBRA VIDEO -->
-
 <div
 
 class="
@@ -942,9 +873,6 @@ hero-gradient
 ">
 
 </div>
-
-
-
 
 
 
@@ -966,14 +894,7 @@ items-center
 
 
 
-
-
-
-
 <div>
-
-
-
 
 
 
@@ -989,6 +910,7 @@ rounded-full
 px-6
 py-3
 mb-10
+mt-10
 ">
 
 
@@ -1019,13 +941,7 @@ Cavalos Premium Selecionados
 
 
 </div>
-
-
-
-
-
-
-
+<!-- CONTINUAÇÃO HERO -->
 
 
 <h1
@@ -1045,11 +961,9 @@ text-5xl
 md:text-8xl
 ">
 
-Excelência
+Cavalos
 
 </span>
-
-
 
 
 
@@ -1062,12 +976,9 @@ text-5xl
 md:text-9xl
 ">
 
-Em Cavalos
+Premium
 
 </span>
-
-
-
 
 
 
@@ -1079,16 +990,13 @@ text-5xl
 md:text-8xl
 ">
 
-Premium
+À Venda
 
 </span>
 
 
 
 </h1>
-
-
-
 
 
 
@@ -1104,18 +1012,13 @@ leading-relaxed
 mb-10
 ">
 
+Encontre cavalos selecionados para esporte,
+reprodução e investimento.
 
-Animais selecionados,
-genética superior,
-registro completo e qualidade
-para grandes criadores
-e investidores.
-
+Animais com genética superior,
+registro e informações completas.
 
 </p>
-
-
-
 
 
 
@@ -1132,9 +1035,6 @@ gap-5
 ">
 
 
-
-
-
 <a
 
 href="#cavalos"
@@ -1143,14 +1043,9 @@ class="
 gold-button
 ">
 
-
-Ver Plantel
-
+Ver Cavalos Disponíveis
 
 </a>
-
-
-
 
 
 
@@ -1163,13 +1058,13 @@ class="
 outline-button
 ">
 
-
-Consultor Especialista
-
+Falar com Especialista
 
 </a>
 
 
+</div>
+
 
 
 
@@ -1181,18 +1076,8 @@ Consultor Especialista
 
 
 
-</div>
+<!-- IMAGEM LATERAL -->
 
-
-
-
-
-
-
-
-
-
-<!-- LOGO LATERAL -->
 
 <div
 
@@ -1205,9 +1090,7 @@ justify-center
 
 <img
 
-src="
-assets/images/logo-dour.png
-"
+src="assets/images/logo-dour.png"
 
 class="
 w-[420px]
@@ -1217,10 +1100,7 @@ transition
 duration-700
 "
 
-
-alt="
-Gestor Haras
-">
+alt="Cavalos Premium">
 
 
 </div>
@@ -1228,19 +1108,10 @@ Gestor Haras
 
 
 
-
-
-
-
 </div>
-
 
 
 </section>
-
-
-
-
 
 
 
@@ -1262,7 +1133,7 @@ id="cavalos"
 
 class="
 relative
-py-28
+py-32
 bg-neutral-950
 overflow-hidden
 ">
@@ -1290,7 +1161,6 @@ rounded-full
 
 
 
-
 <div
 
 class="
@@ -1305,7 +1175,6 @@ rounded-full
 ">
 
 </div>
-
 
 
 
@@ -1330,8 +1199,6 @@ md:px-10
 
 
 
-
-
 <div
 
 class="
@@ -1340,8 +1207,6 @@ max-w-4xl
 mx-auto
 mb-20
 ">
-
-
 
 
 
@@ -1362,10 +1227,9 @@ text-xs
 font-bold
 ">
 
-Plantel Exclusivo
+Venda Exclusiva
 
 </span>
-
 
 
 
@@ -1383,13 +1247,9 @@ mt-8
 mb-6
 ">
 
-
-Cavalos em Destaque
-
+Cavalos Premium Disponíveis
 
 </h2>
-
-
 
 
 
@@ -1405,17 +1265,16 @@ text-lg
 leading-relaxed
 ">
 
+Conheça nossos animais disponíveis.
 
-Animais selecionados pelo Gestor Haras.
-Conheça genética,
-registro,
+Veja fotos,
 idade,
-pelagem e informações completas.
-
+raça,
+pelagem,
+registro,
+genética e valores.
 
 </p>
-
-
 
 
 
@@ -1429,7 +1288,7 @@ pelagem e informações completas.
 
 
 
-<!-- LISTAGEM FIREBASE -->
+<!-- FIREBASE -->
 
 
 <div
@@ -1475,6 +1334,7 @@ mb-6
 
 
 
+
 <p
 
 class="
@@ -1482,19 +1342,19 @@ text-gray-400
 tracking-wide
 ">
 
-Buscando cavalos premium...
+Carregando cavalos disponíveis...
 
 </p>
 
 
-</div>
-
-
-
 
 </div>
 
 
+
+
+
+</div>
 
 
 
@@ -1514,12 +1374,19 @@ Buscando cavalos premium...
 
 
 
+
+
+
+
 <!-- =================================
-MODELO CARD PREMIUM
+MODELO CARD CAVALO PREMIUM
 ================================= -->
 
 
 <template id="modeloCavalo">
+
+
+
 
 
 <div
@@ -1527,7 +1394,7 @@ MODELO CARD PREMIUM
 class="
 group
 bg-black
-rounded-[35px]
+rounded-[40px]
 overflow-hidden
 border
 border-neutral-800
@@ -1543,34 +1410,33 @@ shadow-2xl
 
 
 
-<!-- FOTO MELHORADA -->
+<!-- FOTO DO CAVALO -->
 
 
 <div
 
 class="
 relative
-aspect-[4/3]
+h-[460px]
 overflow-hidden
 bg-neutral-900
 ">
 
 
+
 <img
 
 class="
-w-full
-h-full
-object-cover
-object-center
-group-hover:scale-110
-transition
-duration-700
+cavalo-img
 "
 
-src="
-assets/images/sem-foto.jpg
-">
+src="assets/images/sem-foto.jpg"
+
+alt="Cavalo Premium">
+
+
+
+
 
 
 <div
@@ -1579,7 +1445,7 @@ class="
 absolute
 inset-0
 bg-gradient-to-t
-from-black/80
+from-black
 via-transparent
 to-transparent
 ">
@@ -1590,12 +1456,14 @@ to-transparent
 
 
 
+
+
 <div
 
 class="
 absolute
-top-5
-left-5
+top-6
+left-6
 bg-yellow-500
 text-black
 px-5
@@ -1614,8 +1482,18 @@ Premium
 
 
 
+
 </div>
-<!-- CONTINUAÇÃO MODELO CARD PREMIUM -->
+
+
+
+
+
+
+
+
+
+<!-- INFORMAÇÕES -->
 
 
 <div
@@ -1625,17 +1503,21 @@ p-8
 ">
 
 
+
+
+
 <h3
 
 class="
 title-font
 text-3xl
-mb-5
+mb-6
 ">
 
 Nome do Cavalo
 
 </h3>
+
 
 
 
@@ -1653,17 +1535,11 @@ text-sm
 
 
 
-
-
 <p>
 
 ♞ Raça:
 
-<span
-
-class="
-text-white
-">
+<span class="text-white">
 
 Quarto de Milha
 
@@ -1679,11 +1555,7 @@ Quarto de Milha
 
 ♂ Sexo:
 
-<span
-
-class="
-text-white
-">
+<span class="text-white">
 
 Macho
 
@@ -1699,11 +1571,7 @@ Macho
 
 🎨 Pelagem:
 
-<span
-
-class="
-text-white
-">
+<span class="text-white">
 
 Alazão
 
@@ -1719,11 +1587,7 @@ Alazão
 
 🎂 Idade:
 
-<span
-
-class="
-text-white
-">
+<span class="text-white">
 
 5 anos
 
@@ -1734,8 +1598,8 @@ text-white
 
 
 
-</div>
 
+</div>
 
 
 
@@ -1750,11 +1614,10 @@ text-white
 class="
 border-t
 border-neutral-800
-my-6
+my-7
 ">
 
 </div>
-
 
 
 
@@ -1770,7 +1633,7 @@ class="
 flex
 items-center
 justify-between
-gap-4
+gap-5
 ">
 
 
@@ -1792,7 +1655,6 @@ tracking-widest
 Valor
 
 </span>
-
 
 
 
@@ -1819,11 +1681,11 @@ R$ 0,00
 
 
 
+
+
 <a
 
-href="
-detalhe-cavalo.html
-"
+href="detalhe-cavalo.html"
 
 class="
 px-5
@@ -1847,8 +1709,6 @@ Ver detalhes
 
 
 
-
-
 </div>
 
 
@@ -1863,20 +1723,14 @@ Ver detalhes
 
 
 </div>
+
+
+
 
 
 </template>
-
-
-
-
-
-
-
-
-
 <!-- =================================
-CHAMADA ABAIXO DO PLANTEL
+CHAMADA APÓS CAVALOS
 ================================= -->
 
 
@@ -1888,9 +1742,6 @@ bg-black
 ">
 
 
-
-
-
 <div
 
 class="
@@ -1899,8 +1750,6 @@ mx-auto
 px-5
 md:px-10
 ">
-
-
 
 
 
@@ -1928,10 +1777,9 @@ text-xs
 font-bold
 ">
 
-Marketplace Haras
+Seleção Especial
 
 </span>
-
 
 
 
@@ -1949,12 +1797,10 @@ mt-6
 mb-8
 ">
 
-Escolha um cavalo
-à altura dos seus objetivos
+Encontre o cavalo
+ideal para seus objetivos
 
 </h2>
-
-
 
 
 
@@ -1969,14 +1815,14 @@ text-gray-400
 max-w-3xl
 mx-auto
 text-lg
+leading-relaxed
 ">
 
-Cada animal possui informações detalhadas
-para uma negociação transparente,
-segura e profissional.
+Animais selecionados para quem busca
+qualidade, genética, desempenho
+e segurança na compra.
 
 </p>
-
 
 
 
@@ -1998,7 +1844,7 @@ class="
 gold-button
 ">
 
-Solicitar Atendimento
+Consultar Cavalos Disponíveis
 
 </a>
 
@@ -2010,14 +1856,13 @@ Solicitar Atendimento
 
 
 
-
 </div>
 
 
 
 
-
 </div>
+
 
 
 </section>
@@ -2031,7 +1876,7 @@ Solicitar Atendimento
 
 
 <!-- =================================
-SOBRE O GESTOR HARAS
+NOSSA SELEÇÃO DE CAVALOS
 ================================= -->
 
 
@@ -2063,7 +1908,6 @@ rounded-full
 ">
 
 </div>
-
 
 
 
@@ -2110,8 +1954,6 @@ items-center
 
 
 
-
-
 <span
 
 class="
@@ -2122,10 +1964,9 @@ text-xs
 font-bold
 ">
 
-Sobre o Gestor Haras
+Cavalos Selecionados
 
 </span>
-
 
 
 
@@ -2145,12 +1986,10 @@ mt-7
 mb-8
 ">
 
-Tradição,
-tecnologia e excelência
-na criação de cavalos
+Animais preparados
+para grandes histórias
 
 </h2>
-
 
 
 
@@ -2167,10 +2006,11 @@ leading-relaxed
 mb-6
 ">
 
-O Gestor Haras conecta tradição do campo
-com tecnologia moderna para apresentar
-animais selecionados com transparência,
-segurança e qualidade.
+Selecionamos cavalos com características
+superiores para diferentes objetivos:
+
+esporte, reprodução,
+lazer e investimento.
 
 </p>
 
@@ -2189,13 +2029,11 @@ leading-relaxed
 mb-10
 ">
 
-Cada cavalo possui informações completas,
-incluindo genética,
-características,
-registro e histórico.
+Cada animal possui informações detalhadas
+para facilitar uma negociação segura,
+transparente e profissional.
 
 </p>
-
 
 
 
@@ -2211,7 +2049,7 @@ class="
 gold-button
 ">
 
-Conhecer Plantel
+Ver Plantel Disponível
 
 </a>
 
@@ -2219,8 +2057,9 @@ Conhecer Plantel
 
 
 
-
 </div>
+
+
 
 
 
@@ -2258,12 +2097,9 @@ rounded-full
 
 
 
-
 <img
 
-src="
-assets/images/haras/destaque.jpg
-"
+src="assets/images/haras/destaque.jpg"
 
 class="
 relative
@@ -2280,21 +2116,7 @@ transition
 duration-700
 "
 
-
-alt="
-Haras Premium
-">
-
-
-
-
-
-
-
-</div>
-
-
-
+alt="Cavalos Premium">
 
 
 
@@ -2303,6 +2125,13 @@ Haras Premium
 
 </div>
 
+
+
+
+
+
+
+</div>
 
 
 
@@ -2316,8 +2145,17 @@ Haras Premium
 
 
 </section>
+
+
+
+
+
+
+
+
+
 <!-- =================================
-DIFERENCIAIS PREMIUM
+POR QUE COMPRAR
 ================================= -->
 
 
@@ -2327,6 +2165,9 @@ class="
 py-28
 bg-black
 ">
+
+
+
 
 
 <div
@@ -2373,6 +2214,7 @@ Diferenciais
 
 
 
+
 <h2
 
 class="
@@ -2383,7 +2225,7 @@ mt-6
 ">
 
 Por que escolher
-o Gestor Haras?
+nossos cavalos?
 
 </h2>
 
@@ -2391,7 +2233,9 @@ o Gestor Haras?
 
 
 
+
 </div>
+
 
 
 
@@ -2415,6 +2259,9 @@ gap-8
 
 
 
+<!-- CARD 1 -->
+
+
 <div
 
 class="
@@ -2425,6 +2272,7 @@ text-center
 hover:-translate-y-3
 transition
 ">
+
 
 
 <div
@@ -2441,6 +2289,7 @@ mb-6
 
 
 
+
 <h3
 
 class="
@@ -2449,9 +2298,11 @@ text-2xl
 mb-4
 ">
 
-Genética Superior
+Genética Selecionada
 
 </h3>
+
+
 
 
 
@@ -2462,8 +2313,9 @@ class="
 text-gray-400
 ">
 
-Linhagens selecionadas
-e animais de alto padrão.
+Animais escolhidos
+por qualidade genética
+e potencial.
 
 </p>
 
@@ -2480,6 +2332,10 @@ e animais de alto padrão.
 
 
 
+
+<!-- CARD 2 -->
+
+
 <div
 
 class="
@@ -2490,6 +2346,7 @@ text-center
 hover:-translate-y-3
 transition
 ">
+
 
 
 <div
@@ -2503,6 +2360,8 @@ mb-6
 📜
 
 </div>
+
+
 
 
 
@@ -2521,13 +2380,15 @@ Registro Completo
 
 
 
+
+
 <p
 
 class="
 text-gray-400
 ">
 
-Informações confiáveis
+Informações detalhadas
 sobre cada animal.
 
 </p>
@@ -2545,6 +2406,11 @@ sobre cada animal.
 
 
 
+
+
+<!-- CARD 3 -->
+
+
 <div
 
 class="
@@ -2555,6 +2421,7 @@ text-center
 hover:-translate-y-3
 transition
 ">
+
 
 
 <div
@@ -2571,6 +2438,9 @@ mb-6
 
 
 
+
+
+
 <h3
 
 class="
@@ -2582,6 +2452,8 @@ mb-4
 Alto Padrão
 
 </h3>
+
+
 
 
 
@@ -2610,6 +2482,10 @@ reprodução e investimento.
 
 
 
+
+<!-- CARD 4 -->
+
+
 <div
 
 class="
@@ -2620,6 +2496,7 @@ text-center
 hover:-translate-y-3
 transition
 ">
+
 
 
 <div
@@ -2636,6 +2513,9 @@ mb-6
 
 
 
+
+
+
 <h3
 
 class="
@@ -2644,9 +2524,11 @@ text-2xl
 mb-4
 ">
 
-Negociação Segura
+Compra Segura
 
 </h3>
+
+
 
 
 
@@ -2657,8 +2539,8 @@ class="
 text-gray-400
 ">
 
-Suporte especializado
-em todo processo.
+Auxílio completo
+durante a negociação.
 
 </p>
 
@@ -2672,8 +2554,6 @@ em todo processo.
 
 
 
-
-
 </div>
 
 
@@ -2681,15 +2561,14 @@ em todo processo.
 
 
 
-
 </div>
+
+
+
 
 
 
 </section>
-
-
-
 
 
 
@@ -2710,6 +2589,9 @@ class="
 py-24
 bg-neutral-950
 ">
+
+
+
 
 
 <div
@@ -2733,7 +2615,6 @@ grid-cols-2
 md:grid-cols-4
 gap-6
 ">
-
 
 
 
@@ -2763,6 +2644,7 @@ font-bold
 </strong>
 
 
+
 <p
 
 class="
@@ -2776,7 +2658,6 @@ Cavalos cadastrados
 
 
 </div>
-
 
 
 
@@ -2803,9 +2684,10 @@ text-5xl
 font-bold
 ">
 
-50+
+100+
 
 </strong>
+
 
 
 <p
@@ -2815,13 +2697,12 @@ text-gray-400
 mt-3
 ">
 
-Criadores parceiros
+Negociações realizadas
 
 </p>
 
 
 </div>
-
 
 
 
@@ -2853,6 +2734,7 @@ font-bold
 </strong>
 
 
+
 <p
 
 class="
@@ -2866,7 +2748,6 @@ Anos de experiência
 
 
 </div>
-
 
 
 
@@ -2898,6 +2779,7 @@ font-bold
 </strong>
 
 
+
 <p
 
 class="
@@ -2917,31 +2799,19 @@ Compromisso
 
 
 
-
-
 </div>
 
 
 
 
 
-
-
 </div>
+
 
 
 </section>
-
-
-
-
-
-
-
-
-
 <!-- =================================
-DESTAQUES PREMIUM DO HARAS
+DESTAQUES DOS CAVALOS
 ================================= -->
 
 
@@ -2996,6 +2866,8 @@ z-10
 
 
 
+
+
 <div
 
 class="
@@ -3010,7 +2882,12 @@ items-center
 
 
 
+
+<!-- TEXTO -->
+
+
 <div>
+
 
 
 
@@ -3026,9 +2903,10 @@ text-xs
 font-bold
 ">
 
-Haras SG Experience
+Cavalos de Elite
 
 </span>
+
 
 
 
@@ -3047,18 +2925,8 @@ mt-8
 mb-8
 ">
 
-Excelência
-para cavalos
-
-<span
-
-class="
-gold
-">
-
-extraordinários
-
-</span>
+Animais únicos
+para compradores exigentes
 
 </h2>
 
@@ -3077,9 +2945,11 @@ leading-relaxed
 mb-8
 ">
 
-Cada cavalo apresentado possui
-história, genética selecionada,
-registro e informações completas.
+Nossa seleção reúne cavalos
+com características diferenciadas,
+
+linhagens valorizadas
+e potencial para grandes resultados.
 
 </p>
 
@@ -3088,15 +2958,122 @@ registro e informações completas.
 
 
 
+
+<div
+
+class="
+grid
+grid-cols-2
+gap-5
+mb-10
+">
+
+
+
+
+
+<div
+
+class="
+glass
+rounded-3xl
+p-6
+">
+
+
+<h3
+
+class="
+text-yellow-500
+text-3xl
+font-bold
+">
+
+Premium
+
+</h3>
+
+
+
+<p
+
+class="
+text-gray-400
+mt-2
+">
+
+Seleção genética
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div
+
+class="
+glass
+rounded-3xl
+p-6
+">
+
+
+<h3
+
+class="
+text-yellow-500
+text-3xl
+font-bold
+">
+
+Seguro
+
+</h3>
+
+
+
+<p
+
+class="
+text-gray-400
+mt-2
+">
+
+Compra transparente
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
 <a
 
-href="#contato"
+href="#cavalos"
 
 class="
 gold-button
 ">
 
-Solicitar atendimento
+Ver Cavalos à Venda
 
 </a>
 
@@ -3115,11 +3092,16 @@ Solicitar atendimento
 
 
 
+<!-- IMAGEM -->
+
+
 <div
 
 class="
 relative
 ">
+
+
 
 
 
@@ -3141,11 +3123,10 @@ rounded-full
 
 
 
+
 <img
 
-src="
-assets/images/haras/destaque.jpg
-"
+src="assets/images/haras/destaque.jpg"
 
 class="
 relative
@@ -3162,9 +3143,7 @@ transition
 duration-700
 "
 
-alt="
-Haras Premium
-">
+alt="Cavalo Premium">
 
 
 
@@ -3185,6 +3164,7 @@ p-6
 ">
 
 
+
 <p
 
 class="
@@ -3197,6 +3177,7 @@ text-xs
 Seleção Especial
 
 </p>
+
 
 
 
@@ -3213,11 +3194,6 @@ Cavalos de Alto Padrão
 </h3>
 
 
-</div>
-
-
-
-
 
 </div>
 
@@ -3226,7 +3202,6 @@ Cavalos de Alto Padrão
 
 
 
-
 </div>
 
 
@@ -3235,13 +3210,30 @@ Cavalos de Alto Padrão
 
 
 
+
 </div>
+
+
+
+
+
+</div>
+
 
 
 
 
 
 </section>
+
+
+
+
+
+
+
+
+
 <!-- =================================
 PROCESSO DE COMPRA
 ================================= -->
@@ -3255,6 +3247,9 @@ bg-neutral-950
 ">
 
 
+
+
+
 <div
 
 class="
@@ -3265,12 +3260,19 @@ px-6
 
 
 
+
+
+
+
 <div
 
 class="
 text-center
 mb-20
 ">
+
+
+
 
 
 <span
@@ -3283,9 +3285,14 @@ text-xs
 font-bold
 ">
 
-Experiência Premium
+Compra Premium
 
 </span>
+
+
+
+
+
 
 
 
@@ -3298,13 +3305,17 @@ md:text-7xl
 mt-6
 ">
 
-Como adquirir seu cavalo
+Como comprar seu cavalo
 
 </h2>
 
 
 
+
+
+
 </div>
+
 
 
 
@@ -3325,6 +3336,11 @@ gap-10
 
 
 
+
+
+<!-- PASSO 1 -->
+
+
 <div
 
 class="
@@ -3335,6 +3351,9 @@ text-center
 hover:-translate-y-3
 transition
 ">
+
+
+
 
 
 <div
@@ -3361,6 +3380,9 @@ mb-8
 
 
 
+
+
+
 <h3
 
 class="
@@ -3375,6 +3397,9 @@ Escolha
 
 
 
+
+
+
 <p
 
 class="
@@ -3382,13 +3407,15 @@ text-gray-400
 leading-relaxed
 ">
 
-Analise fotos,
-linhagem,
-registro,
+Veja fotos,
+informações,
+genética,
 idade e características
-do animal.
+do cavalo.
 
 </p>
+
+
 
 
 
@@ -3398,6 +3425,11 @@ do animal.
 
 
 
+
+
+
+
+<!-- PASSO 2 -->
 
 
 <div
@@ -3410,6 +3442,9 @@ text-center
 hover:-translate-y-3
 transition
 ">
+
+
+
 
 
 <div
@@ -3436,6 +3471,10 @@ mb-8
 
 
 
+
+
+
+
 <h3
 
 class="
@@ -3450,6 +3489,11 @@ Avaliação
 
 
 
+
+
+
+
+
 <p
 
 class="
@@ -3458,11 +3502,12 @@ leading-relaxed
 ">
 
 Nossa equipe auxilia
-na análise,
-documentação
+na análise do animal
 e negociação.
 
 </p>
+
+
 
 
 
@@ -3472,6 +3517,11 @@ e negociação.
 
 
 
+
+
+
+
+<!-- PASSO 3 -->
 
 
 <div
@@ -3484,6 +3534,9 @@ text-center
 hover:-translate-y-3
 transition
 ">
+
+
+
 
 
 <div
@@ -3510,6 +3563,10 @@ mb-8
 
 
 
+
+
+
+
 <h3
 
 class="
@@ -3524,6 +3581,11 @@ Compra Segura
 
 
 
+
+
+
+
+
 <p
 
 class="
@@ -3531,27 +3593,35 @@ text-gray-400
 leading-relaxed
 ">
 
-Suporte completo
-até transporte
-e entrega do animal.
+Acompanhamento completo
+até entrega do animal.
 
 </p>
 
 
 
-</div>
-
-
-
-
-
 
 
 </div>
 
 
 
+
+
+
+
+
+
 </div>
+
+
+
+
+
+</div>
+
+
+
 
 
 </section>
@@ -3577,6 +3647,10 @@ bg-black
 ">
 
 
+
+
+
+
 <div
 
 class="
@@ -3584,6 +3658,10 @@ container
 mx-auto
 px-6
 ">
+
+
+
+
 
 
 
@@ -3603,6 +3681,8 @@ border-yellow-500/20
 
 
 
+
+
 <span
 
 class="
@@ -3612,9 +3692,10 @@ tracking-[6px]
 text-xs
 ">
 
-Gestor Haras Premium
+Cavalos Premium
 
 </span>
+
 
 
 
@@ -3633,9 +3714,10 @@ mb-8
 ">
 
 Encontre o cavalo
-ideal para sua história
+ideal para você
 
 </h2>
+
 
 
 
@@ -3654,11 +3736,14 @@ leading-relaxed
 mb-10
 ">
 
-Uma plataforma criada para conectar
-criadores e compradores
-de cavalos selecionados.
+Animais selecionados,
+informações completas
+e atendimento especializado
+para sua compra.
 
 </p>
+
+
 
 
 
@@ -3673,7 +3758,7 @@ class="
 gold-button
 ">
 
-Ver cavalos disponíveis
+Ver Cavalos Disponíveis
 
 </a>
 
@@ -3682,25 +3767,21 @@ Ver cavalos disponíveis
 
 
 
+
+</div>
+
+
+
+
+
+
 </div>
 
 
 
-
-
-</div>
 
 
 </section>
-
-
-
-
-
-
-
-
-
 <!-- =================================
 CONTATO PREMIUM
 ================================= -->
@@ -3716,6 +3797,9 @@ py-28
 bg-neutral-950
 overflow-hidden
 ">
+
+
+
 
 
 <div
@@ -3737,6 +3821,8 @@ rounded-full
 
 
 
+
+
 <div
 
 class="
@@ -3746,6 +3832,8 @@ px-6
 relative
 z-10
 ">
+
+
 
 
 
@@ -3777,7 +3865,7 @@ text-xs
 font-bold
 ">
 
-Atendimento Exclusivo
+Atendimento Especializado
 
 </span>
 
@@ -3807,6 +3895,7 @@ Encontrou seu cavalo ideal?
 
 
 
+
 <p
 
 class="
@@ -3815,14 +3904,15 @@ text-lg
 max-w-3xl
 mx-auto
 mb-12
+leading-relaxed
 ">
 
-Nossa equipe está preparada
-para auxiliar na escolha,
-tirar dúvidas e acompanhar
-todo processo.
+Entre em contato para receber
+mais informações sobre disponibilidade,
+valores e negociação do animal.
 
 </p>
+
 
 
 
@@ -3853,15 +3943,26 @@ Conversar com especialista
 
 
 
+
+</div>
+
+
+
+
+
+
+
 </div>
 
 
 
 
-</div>
 
 
 </section>
+
+
+
 
 
 
@@ -3888,6 +3989,10 @@ z-20
 ">
 
 
+
+
+
+
 <div
 
 class="
@@ -3901,12 +4006,9 @@ text-center
 
 
 
-
 <img
 
-src="
-assets/images/logo-dour.png
-"
+src="assets/images/logo-dour.png"
 
 class="
 w-36
@@ -3916,11 +4018,7 @@ hover:scale-110
 transition
 "
 
-alt="
-Gestor Haras
-">
-
-
+alt="Gestor Haras">
 
 
 
@@ -3943,23 +4041,51 @@ tracking-[3px]
 
 
 
-<a href="#inicio">
+
+
+<a
+
+href="#inicio"
+class="hover:text-yellow-500 transition">
+
 Início
+
 </a>
 
 
-<a href="#cavalos">
+
+
+
+
+<a
+
+href="#cavalos"
+class="hover:text-yellow-500 transition">
+
 Cavalos
+
 </a>
 
 
-<a href="#contato">
+
+
+
+
+<a
+
+href="#contato"
+class="hover:text-yellow-500 transition">
+
 Contato
+
 </a>
+
+
 
 
 
 </div>
+
 
 
 
@@ -3974,7 +4100,6 @@ text-gray-500
 text-sm
 ">
 
-
 Gestor Haras ©
 
 <span id="ano"></span>
@@ -3983,7 +4108,7 @@ Gestor Haras ©
 <br>
 
 
-Excelência em cavalos premium.
+Cavalos premium selecionados.
 
 
 </p>
@@ -3995,6 +4120,9 @@ Excelência em cavalos premium.
 
 
 </div>
+
+
+
 
 
 </footer>
@@ -4015,6 +4143,13 @@ SCRIPTS
 <script>
 
 
+/*
+========================
+LOADER
+========================
+*/
+
+
 window.addEventListener(
 "load",
 ()=>{
@@ -4026,6 +4161,7 @@ document.getElementById(
 );
 
 
+
 if(loader){
 
 
@@ -4033,6 +4169,11 @@ setTimeout(()=>{
 
 
 loader.style.opacity="0";
+
+
+loader.style.transition=
+"opacity .6s";
+
 
 
 setTimeout(()=>{
@@ -4044,10 +4185,13 @@ loader.remove();
 },600);
 
 
+
 },1200);
 
 
+
 }
+
 
 
 });
@@ -4059,10 +4203,19 @@ loader.remove();
 
 
 
+
+/*
+========================
+MENU MOBILE
+========================
+*/
+
+
 const menuBtn =
 document.getElementById(
 "menuBtn"
 );
+
 
 
 const mobileMenu =
@@ -4084,13 +4237,11 @@ mobileMenu.classList.toggle(
 );
 
 
+
 };
 
 
 }
-
-
-
 
 
 
@@ -4113,7 +4264,9 @@ mobileMenu.classList.add(
 );
 
 
+
 };
+
 
 
 });
@@ -4124,6 +4277,15 @@ mobileMenu.classList.add(
 
 
 
+
+
+
+
+/*
+========================
+NAVBAR SCROLL
+========================
+*/
 
 
 window.addEventListener(
@@ -4139,6 +4301,7 @@ document.getElementById(
 
 
 if(window.scrollY > 80){
+
 
 
 nav.classList.add(
@@ -4159,7 +4322,9 @@ nav.classList.remove(
 );
 
 
+
 }
+
 
 
 });
@@ -4172,6 +4337,16 @@ nav.classList.remove(
 
 
 
+
+
+
+/*
+========================
+WHATSAPP
+========================
+*/
+
+
 const whatsapp =
 document.getElementById(
 "whatsappBtn"
@@ -4182,22 +4357,25 @@ document.getElementById(
 if(whatsapp){
 
 
+
 const numero =
-"5521999999999";
+"5521999863078";
 
 
 
 const mensagem =
 encodeURIComponent(
 
-"Olá! Tenho interesse em um cavalo premium do Gestor Haras."
+"Olá! Tenho interesse em comprar um cavalo premium anunciado no site."
 
 );
 
 
 
 whatsapp.href =
+
 `https://wa.me/${numero}?text=${mensagem}`;
+
 
 
 }
@@ -4208,6 +4386,16 @@ whatsapp.href =
 
 
 
+
+
+
+
+
+/*
+========================
+ANO AUTOMÁTICO
+========================
+*/
 
 
 const ano =
@@ -4219,9 +4407,12 @@ document.getElementById(
 
 if(ano){
 
+
 ano.textContent =
 new Date()
 .getFullYear();
+
+
 
 }
 
@@ -4231,6 +4422,17 @@ new Date()
 
 
 
+
+
+
+
+
+
+/*
+========================
+FALLBACK IMAGENS
+========================
+*/
 
 
 document
@@ -4255,13 +4457,17 @@ img.src=
 "assets/images/sem-foto.jpg";
 
 
+
 }
 
 
 };
 
 
+
 });
+
+
 
 
 
@@ -4274,7 +4480,12 @@ img.src=
 
 
 
-<!-- FIREBASE -->
+
+<!-- =================================
+FIREBASE
+CARREGA CAVALOS
+================================= -->
+
 
 <script
 
@@ -4283,6 +4494,10 @@ type="module"
 src="js/cavalos.js">
 
 </script>
+
+
+
+
 
 
 
