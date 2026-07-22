@@ -71,7 +71,7 @@ body{
 
 margin:0;
 
-padding-top:0;
+padding:0;
 
 background:#050505;
 
@@ -116,14 +116,6 @@ color:#d4af37;
 
 
 
-.gold-text{
-
-color:#d4af37;
-
-}
-
-
-
 
 
 /* =========================
@@ -141,13 +133,15 @@ linear-gradient(
 
 rgba(0,0,0,.20),
 
-rgba(0,0,0,.65) 60%,
+rgba(0,0,0,.75) 65%,
 
 #050505 100%
 
 );
 
 }
+
+
 
 
 
@@ -185,8 +179,10 @@ border:
 
 
 
+
+
 /* =========================
-BOTÕES
+BOTÕES CORRIGIDOS
 ========================= */
 
 
@@ -200,21 +196,43 @@ align-items:center;
 
 justify-content:center;
 
+
 padding:16px 38px;
+
+
+min-height:56px;
+
 
 border-radius:50px;
 
+
 background:#d4af37;
+
 
 color:#000;
 
+
 font-weight:700;
+
 
 transition:.4s;
 
+
 cursor:pointer;
 
+
+white-space:nowrap;
+
+
+max-width:100%;
+
+
+text-align:center;
+
+
 }
+
+
 
 
 
@@ -222,9 +240,7 @@ cursor:pointer;
 .btn-gold:hover{
 
 
-transform:
-
-translateY(-5px);
+transform:translateY(-5px);
 
 
 box-shadow:
@@ -238,26 +254,45 @@ box-shadow:
 
 
 
+
+
 .outline-button{
 
 
 display:inline-flex;
 
+
 align-items:center;
+
 
 justify-content:center;
 
+
 padding:16px 38px;
+
+
+min-height:56px;
+
 
 border-radius:50px;
 
-border:
 
-1px solid #d4af37;
+border:1px solid #d4af37;
+
 
 color:#d4af37;
 
+
 transition:.4s;
+
+
+white-space:nowrap;
+
+
+max-width:100%;
+
+
+text-align:center;
 
 
 }
@@ -269,12 +304,31 @@ transition:.4s;
 
 background:#d4af37;
 
+
 color:#000;
 
 
 }
 
 
+
+
+
+/* BOTÕES HERO */
+
+
+.hero-buttons{
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+gap:20px;
+
+}
 
 
 
@@ -301,6 +355,9 @@ transparent
 );
 
 
+z-index:9999;
+
+
 }
 
 
@@ -324,6 +381,8 @@ blur(20px);
 
 
 
+
+
 /* =========================
 IMAGENS CAVALOS
 ========================= */
@@ -333,6 +392,7 @@ IMAGENS CAVALOS
 
 
 width:100%;
+
 
 height:100%;
 
@@ -352,6 +412,7 @@ transform .8s ease;
 
 
 
+
 .group:hover .cavalo-img{
 
 
@@ -365,78 +426,59 @@ transform:scale(1.08);
 
 
 
+
 /* =========================
-CORREÇÃO MENU FOOTER
+CORREÇÃO MOBILE BOTÕES
 ========================= */
 
 
-#navbar{
+@media(max-width:640px){
 
-z-index:9999;
+
+
+.hero-buttons{
+
+
+flex-direction:column;
+
+
+width:100%;
+
 
 }
 
 
 
-footer{
+.hero-buttons a{
 
-position:relative;
 
-z-index:20;
+width:100%;
+
+
+padding:15px 20px;
+
+
+font-size:14px;
+
 
 }
 
 
 
-section{
-
-position:relative;
-
-z-index:1;
-
-}
-
-
-
-
-
-
-
-/* =========================
-MOBILE
-========================= */
-
-
-@media(max-width:768px){
 
 
 .title-font{
 
+
 letter-spacing:-1px;
 
-}
-
-
-.hero-gradient{
-
-
-background:
-
-linear-gradient(
-
-180deg,
-
-rgba(0,0,0,.35),
-
-rgba(0,0,0,.9)
-
-);
-
 
 }
 
 
+
 }
+
 
 
 
@@ -445,6 +487,7 @@ rgba(0,0,0,.9)
 
 
 </head>
+
 
 
 
@@ -480,6 +523,7 @@ justify-center
 <div class="text-center">
 
 
+
 <img
 
 src="assets/images/logo-dour.png"
@@ -491,6 +535,8 @@ mb-8
 "
 
 alt="Gestor Haras">
+
+
 
 
 
@@ -514,10 +560,12 @@ animate-pulse
 w-full
 ">
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -538,11 +586,11 @@ Cavalos • Genética • Excelência
 
 
 
-</div>
-
 
 </div>
 
+
+</div>
 
 
 
@@ -568,6 +616,7 @@ w-full
 transition
 duration-500
 ">
+
 
 
 <nav
@@ -613,8 +662,6 @@ alt="Gestor Haras">
 
 
 
-
-
 <div
 
 class="
@@ -642,7 +689,6 @@ Início
 
 
 
-
 <a
 
 href="#cavalos"
@@ -652,7 +698,6 @@ class="hover:text-yellow-500 transition">
 Cavalos à Venda
 
 </a>
-
 
 
 
@@ -670,7 +715,6 @@ Destaques
 
 
 
-
 <a
 
 href="#contato"
@@ -680,7 +724,6 @@ class="hover:text-yellow-500 transition">
 Contato
 
 </a>
-
 
 
 
@@ -703,8 +746,6 @@ Entrar
 
 
 
-
-
 <button
 
 id="menuBtn"
@@ -722,10 +763,7 @@ text-4xl
 
 
 </nav>
-
-
-
-
+<!-- CONTINUAÇÃO NAVBAR -->
 
 
 <div
@@ -762,11 +800,13 @@ Início
 </a>
 
 
+
 <a href="#cavalos">
 
 Cavalos
 
 </a>
+
 
 
 <a href="#destaques">
@@ -776,11 +816,14 @@ Destaques
 </a>
 
 
+
 <a href="#contato">
 
 Contato
 
 </a>
+
+
 
 
 
@@ -795,13 +838,17 @@ Entrar
 </a>
 
 
+
 </div>
 
 
 </div>
+
 
 
 </header>
+
+
 
 
 
@@ -825,8 +872,11 @@ min-h-screen
 flex
 items-center
 overflow-hidden
-pt-28
+pt-32
+pb-20
 ">
+
+
 
 
 
@@ -864,6 +914,9 @@ type="video/mp4">
 
 
 
+
+
+
 <div
 
 class="
@@ -878,6 +931,9 @@ hero-gradient
 
 
 
+
+
+
 <div
 
 class="
@@ -886,6 +942,7 @@ z-10
 max-w-7xl
 mx-auto
 px-6
+w-full
 grid
 lg:grid-cols-2
 gap-16
@@ -894,7 +951,16 @@ items-center
 
 
 
+
+
+
+
+<!-- TEXTO HERO -->
+
+
 <div>
+
+
 
 
 
@@ -909,9 +975,10 @@ glass
 rounded-full
 px-6
 py-3
-mb-10
-mt-10
+mb-8
 ">
+
+
 
 
 <span
@@ -924,6 +991,7 @@ text-xl
 ★
 
 </span>
+
 
 
 
@@ -940,8 +1008,15 @@ Cavalos Premium Selecionados
 </span>
 
 
+
 </div>
-<!-- CONTINUAÇÃO HERO -->
+
+
+
+
+
+
+
 
 
 <h1
@@ -953,11 +1028,13 @@ mb-8
 ">
 
 
+
 <span
 
 class="
 block
 text-5xl
+sm:text-6xl
 md:text-8xl
 ">
 
@@ -967,12 +1044,15 @@ Cavalos
 
 
 
+
+
 <span
 
 class="
 block
 gold
 text-5xl
+sm:text-6xl
 md:text-9xl
 ">
 
@@ -982,11 +1062,15 @@ Premium
 
 
 
+
+
+
 <span
 
 class="
 block
 text-5xl
+sm:text-6xl
 md:text-8xl
 ">
 
@@ -996,7 +1080,13 @@ md:text-8xl
 
 
 
+
+
 </h1>
+
+
+
+
 
 
 
@@ -1025,13 +1115,17 @@ registro e informações completas.
 
 
 
+
+
+
+
+<!-- BOTÕES CORRIGIDOS -->
+
+
 <div
 
 class="
-flex
-flex-col
-sm:flex-row
-gap-5
+hero-buttons
 ">
 
 
@@ -1050,25 +1144,18 @@ Ver Cavalos Disponíveis
 
 
 
-<a
 
-href="#contato"
 
-class="
-outline-button
-">
 
-Falar com Especialista
+</div>
 
-</a>
+
+
 
 
 </div>
 
 
-
-
-</div>
 
 
 
@@ -1088,6 +1175,7 @@ justify-center
 ">
 
 
+
 <img
 
 src="assets/images/logo-dour.png"
@@ -1100,18 +1188,29 @@ transition
 duration-700
 "
 
-alt="Cavalos Premium">
+alt="Gestor Haras">
+
+
+
+</div>
+
+
+
+
 
 
 </div>
 
 
 
-
-</div>
 
 
 </section>
+
+
+
+
+
 
 
 
@@ -1143,6 +1242,8 @@ overflow-hidden
 
 
 
+
+
 <div
 
 class="
@@ -1157,6 +1258,9 @@ rounded-full
 ">
 
 </div>
+
+
+
 
 
 
@@ -1183,6 +1287,7 @@ rounded-full
 
 
 
+
 <div
 
 class="
@@ -1199,6 +1304,7 @@ md:px-10
 
 
 
+
 <div
 
 class="
@@ -1207,6 +1313,9 @@ max-w-4xl
 mx-auto
 mb-20
 ">
+
+
+
 
 
 
@@ -1230,6 +1339,7 @@ font-bold
 Venda Exclusiva
 
 </span>
+
 
 
 
@@ -1278,17 +1388,12 @@ genética e valores.
 
 
 
+
+
 </div>
-
-
-
-
-
-
-
-
-
-<!-- FIREBASE -->
+<!-- =========================
+FIREBASE LISTA CAVALOS
+========================= -->
 
 
 <div
@@ -1360,12 +1465,15 @@ Carregando cavalos disponíveis...
 
 
 
+
 </div>
 
 
 
 
+
 </section>
+
 
 
 
@@ -1384,6 +1492,7 @@ MODELO CARD CAVALO PREMIUM
 
 
 <template id="modeloCavalo">
+
 
 
 
@@ -1410,7 +1519,7 @@ shadow-2xl
 
 
 
-<!-- FOTO DO CAVALO -->
+<!-- FOTO -->
 
 
 <div
@@ -1421,6 +1530,8 @@ h-[460px]
 overflow-hidden
 bg-neutral-900
 ">
+
+
 
 
 
@@ -1439,6 +1550,8 @@ alt="Cavalo Premium">
 
 
 
+
+
 <div
 
 class="
@@ -1451,6 +1564,7 @@ to-transparent
 ">
 
 </div>
+
 
 
 
@@ -1506,6 +1620,7 @@ p-8
 
 
 
+
 <h3
 
 class="
@@ -1525,6 +1640,7 @@ Nome do Cavalo
 
 
 
+
 <div
 
 class="
@@ -1532,6 +1648,8 @@ space-y-3
 text-gray-400
 text-sm
 ">
+
+
 
 
 
@@ -1659,6 +1777,7 @@ Valor
 
 
 
+
 <p
 
 class="
@@ -1674,6 +1793,7 @@ R$ 0,00
 
 
 </div>
+
 
 
 
@@ -1709,10 +1829,6 @@ Ver detalhes
 
 
 
-</div>
-
-
-
 
 
 </div>
@@ -1722,13 +1838,38 @@ Ver detalhes
 
 
 
+
 </div>
+
+
+
+
+
+
+
+</div>
+
+
 
 
 
 
 
 </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- =================================
 CHAMADA APÓS CAVALOS
 ================================= -->
@@ -1742,6 +1883,7 @@ bg-black
 ">
 
 
+
 <div
 
 class="
@@ -1750,6 +1892,9 @@ mx-auto
 px-5
 md:px-10
 ">
+
+
+
 
 
 
@@ -1762,6 +1907,8 @@ p-10
 md:p-16
 text-center
 ">
+
+
 
 
 
@@ -1780,6 +1927,8 @@ font-bold
 Seleção Especial
 
 </span>
+
+
 
 
 
@@ -1808,6 +1957,7 @@ ideal para seus objetivos
 
 
 
+
 <p
 
 class="
@@ -1829,11 +1979,13 @@ e segurança na compra.
 
 
 
+
 <div
 
 class="
 mt-10
 ">
+
 
 
 <a
@@ -1850,31 +2002,31 @@ Consultar Cavalos Disponíveis
 
 
 
-</div>
-
-
-
-
 
 </div>
 
 
 
 
+
+
+
+
 </div>
+
+
+
+
+
+
+
+</div>
+
+
 
 
 
 </section>
-
-
-
-
-
-
-
-
-
 <!-- =================================
 NOSSA SELEÇÃO DE CAVALOS
 ================================= -->
@@ -1888,7 +2040,6 @@ py-28
 bg-neutral-950
 overflow-hidden
 ">
-
 
 
 
@@ -1954,6 +2105,7 @@ items-center
 
 
 
+
 <span
 
 class="
@@ -1997,6 +2149,7 @@ para grandes histórias
 
 
 
+
 <p
 
 class="
@@ -2013,6 +2166,7 @@ esporte, reprodução,
 lazer e investimento.
 
 </p>
+
 
 
 
@@ -2057,9 +2211,9 @@ Ver Plantel Disponível
 
 
 
+
+
 </div>
-
-
 
 
 
@@ -2080,6 +2234,8 @@ relative
 
 
 
+
+
 <div
 
 class="
@@ -2091,6 +2247,7 @@ rounded-full
 ">
 
 </div>
+
 
 
 
@@ -2122,7 +2279,6 @@ alt="Cavalos Premium">
 
 
 
-
 </div>
 
 
@@ -2131,20 +2287,27 @@ alt="Cavalos Premium">
 
 
 
-</div>
-
-
-
-
 
 </div>
 
+
+
+
+
+
+</div>
 
 
 
 
 
 </section>
+
+
+
+
+
+
 
 
 
@@ -2170,6 +2333,7 @@ bg-black
 
 
 
+
 <div
 
 class="
@@ -2178,6 +2342,7 @@ mx-auto
 px-5
 md:px-10
 ">
+
 
 
 
@@ -2234,6 +2399,7 @@ nossos cavalos?
 
 
 
+
 </div>
 
 
@@ -2257,9 +2423,6 @@ gap-8
 
 
 
-
-
-<!-- CARD 1 -->
 
 
 <div
@@ -2321,6 +2484,7 @@ e potencial.
 
 
 
+
 </div>
 
 
@@ -2329,11 +2493,6 @@ e potencial.
 
 
 
-
-
-
-
-<!-- CARD 2 -->
 
 
 <div
@@ -2395,6 +2554,7 @@ sobre cada animal.
 
 
 
+
 </div>
 
 
@@ -2403,12 +2563,6 @@ sobre cada animal.
 
 
 
-
-
-
-
-
-<!-- CARD 3 -->
 
 
 <div
@@ -2435,7 +2589,6 @@ mb-6
 🏆
 
 </div>
-
 
 
 
@@ -2471,6 +2624,7 @@ reprodução e investimento.
 
 
 
+
 </div>
 
 
@@ -2479,11 +2633,6 @@ reprodução e investimento.
 
 
 
-
-
-
-
-<!-- CARD 4 -->
 
 
 <div
@@ -2510,7 +2659,6 @@ mb-6
 🔒
 
 </div>
-
 
 
 
@@ -2546,15 +2694,19 @@ durante a negociação.
 
 
 
-</div>
-
-
-
-
-
-
 
 </div>
+
+
+
+
+
+
+
+
+
+</div>
+
 
 
 
@@ -2569,6 +2721,11 @@ durante a negociação.
 
 
 </section>
+
+
+
+
+
 
 
 
@@ -2620,6 +2777,8 @@ gap-6
 
 
 
+
+
 <div
 
 class="
@@ -2645,6 +2804,7 @@ font-bold
 
 
 
+
 <p
 
 class="
@@ -2658,7 +2818,6 @@ Cavalos cadastrados
 
 
 </div>
-
 
 
 
@@ -2690,6 +2849,7 @@ font-bold
 
 
 
+
 <p
 
 class="
@@ -2703,7 +2863,6 @@ Negociações realizadas
 
 
 </div>
-
 
 
 
@@ -2735,6 +2894,7 @@ font-bold
 
 
 
+
 <p
 
 class="
@@ -2748,7 +2908,6 @@ Anos de experiência
 
 
 </div>
-
 
 
 
@@ -2780,6 +2939,7 @@ font-bold
 
 
 
+
 <p
 
 class="
@@ -2799,13 +2959,16 @@ Compromisso
 
 
 
-</div>
-
-
-
-
 
 </div>
+
+
+
+
+
+
+</div>
+
 
 
 
@@ -2867,7 +3030,6 @@ z-10
 
 
 
-
 <div
 
 class="
@@ -2882,12 +3044,7 @@ items-center
 
 
 
-
-<!-- TEXTO -->
-
-
 <div>
-
 
 
 
@@ -2912,8 +3069,6 @@ Cavalos de Elite
 
 
 
-
-
 <h2
 
 class="
@@ -2929,7 +3084,6 @@ Animais únicos
 para compradores exigentes
 
 </h2>
-
 
 
 
@@ -2959,112 +3113,6 @@ e potencial para grandes resultados.
 
 
 
-<div
-
-class="
-grid
-grid-cols-2
-gap-5
-mb-10
-">
-
-
-
-
-
-<div
-
-class="
-glass
-rounded-3xl
-p-6
-">
-
-
-<h3
-
-class="
-text-yellow-500
-text-3xl
-font-bold
-">
-
-Premium
-
-</h3>
-
-
-
-<p
-
-class="
-text-gray-400
-mt-2
-">
-
-Seleção genética
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div
-
-class="
-glass
-rounded-3xl
-p-6
-">
-
-
-<h3
-
-class="
-text-yellow-500
-text-3xl
-font-bold
-">
-
-Seguro
-
-</h3>
-
-
-
-<p
-
-class="
-text-gray-400
-mt-2
-">
-
-Compra transparente
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
 <a
 
 href="#cavalos"
@@ -3080,26 +3128,11 @@ Ver Cavalos à Venda
 
 
 
-
-
 </div>
 
 
 
 
-
-
-
-
-
-<!-- IMAGEM -->
-
-
-<div
-
-class="
-relative
-">
 
 
 
@@ -3108,19 +3141,8 @@ relative
 <div
 
 class="
-absolute
-inset-0
-bg-yellow-500/20
-blur-[120px]
-rounded-full
+relative
 ">
-
-</div>
-
-
-
-
-
 
 
 
@@ -3133,68 +3155,16 @@ relative
 w-full
 h-[600px]
 object-cover
-object-center
 rounded-[60px]
 border
 border-yellow-500/30
 shadow-2xl
-hover:scale-105
-transition
-duration-700
 "
 
 alt="Cavalo Premium">
 
 
 
-
-
-
-
-<div
-
-class="
-absolute
-bottom-8
-left-8
-right-8
-glass
-rounded-3xl
-p-6
-">
-
-
-
-<p
-
-class="
-text-yellow-500
-uppercase
-tracking-[4px]
-text-xs
-">
-
-Seleção Especial
-
-</p>
-
-
-
-
-<h3
-
-class="
-title-font
-text-2xl
-mt-2
-">
-
-Cavalos de Alto Padrão
-
-</h3>
-
-
-
 </div>
 
 
@@ -3209,17 +3179,7 @@ Cavalos de Alto Padrão
 
 
 
-
-
 </div>
-
-
-
-
-
-</div>
-
-
 
 
 
@@ -3234,9 +3194,12 @@ Cavalos de Alto Padrão
 
 
 
-<!-- =================================
-PROCESSO DE COMPRA
-================================= -->
+
+
+
+
+
+<!-- PROCESSO -->
 
 
 <section
@@ -3245,8 +3208,6 @@ class="
 py-28
 bg-neutral-950
 ">
-
-
 
 
 
@@ -3260,65 +3221,19 @@ px-6
 
 
 
-
-
-
-
-<div
-
-class="
-text-center
-mb-20
-">
-
-
-
-
-
-<span
-
-class="
-text-yellow-500
-uppercase
-tracking-[6px]
-text-xs
-font-bold
-">
-
-Compra Premium
-
-</span>
-
-
-
-
-
-
-
-
 <h2
 
 class="
 title-font
 text-5xl
 md:text-7xl
-mt-6
+text-center
+mb-20
 ">
 
 Como comprar seu cavalo
 
 </h2>
-
-
-
-
-
-
-</div>
-
-
-
-
 
 
 
@@ -3336,11 +3251,6 @@ gap-10
 
 
 
-
-
-<!-- PASSO 1 -->
-
-
 <div
 
 class="
@@ -3348,12 +3258,7 @@ glass
 rounded-[45px]
 p-10
 text-center
-hover:-translate-y-3
-transition
 ">
-
-
-
 
 
 <div
@@ -3379,10 +3284,6 @@ mb-8
 
 
 
-
-
-
-
 <h3
 
 class="
@@ -3397,25 +3298,18 @@ Escolha
 
 
 
-
-
-
 <p
 
 class="
 text-gray-400
-leading-relaxed
 ">
 
 Veja fotos,
-informações,
 genética,
 idade e características
 do cavalo.
 
 </p>
-
-
 
 
 
@@ -3426,12 +3320,6 @@ do cavalo.
 
 
 
-
-
-
-<!-- PASSO 2 -->
-
-
 <div
 
 class="
@@ -3439,12 +3327,7 @@ glass
 rounded-[45px]
 p-10
 text-center
-hover:-translate-y-3
-transition
 ">
-
-
-
 
 
 <div
@@ -3470,11 +3353,6 @@ mb-8
 
 
 
-
-
-
-
-
 <h3
 
 class="
@@ -3489,25 +3367,16 @@ Avaliação
 
 
 
-
-
-
-
-
 <p
 
 class="
 text-gray-400
-leading-relaxed
 ">
 
 Nossa equipe auxilia
-na análise do animal
-e negociação.
+na negociação.
 
 </p>
-
-
 
 
 
@@ -3519,11 +3388,6 @@ e negociação.
 
 
 
-
-
-<!-- PASSO 3 -->
-
-
 <div
 
 class="
@@ -3531,12 +3395,7 @@ glass
 rounded-[45px]
 p-10
 text-center
-hover:-translate-y-3
-transition
 ">
-
-
-
 
 
 <div
@@ -3562,11 +3421,6 @@ mb-8
 
 
 
-
-
-
-
-
 <h3
 
 class="
@@ -3581,33 +3435,20 @@ Compra Segura
 
 
 
-
-
-
-
-
 <p
 
 class="
 text-gray-400
-leading-relaxed
 ">
 
 Acompanhamento completo
-até entrega do animal.
+até entrega.
 
 </p>
 
 
 
-
-
 </div>
-
-
-
-
-
 
 
 
@@ -3617,10 +3458,7 @@ até entrega do animal.
 
 
 
-
 </div>
-
-
 
 
 
@@ -3634,12 +3472,15 @@ até entrega do animal.
 
 
 
-<!-- =================================
-CHAMADA FINAL
-================================= -->
 
+
+
+
+<!-- CONTATO -->
 
 <section
+
+id="contato"
 
 class="
 py-28
@@ -3647,10 +3488,6 @@ bg-black
 ">
 
 
-
-
-
-
 <div
 
 class="
@@ -3658,183 +3495,6 @@ container
 mx-auto
 px-6
 ">
-
-
-
-
-
-
-
-<div
-
-class="
-glass
-rounded-[60px]
-p-12
-md:p-20
-text-center
-border
-border-yellow-500/20
-">
-
-
-
-
-
-
-
-<span
-
-class="
-text-yellow-500
-uppercase
-tracking-[6px]
-text-xs
-">
-
-Cavalos Premium
-
-</span>
-
-
-
-
-
-
-
-
-<h2
-
-class="
-title-font
-text-5xl
-md:text-7xl
-mt-8
-mb-8
-">
-
-Encontre o cavalo
-ideal para você
-
-</h2>
-
-
-
-
-
-
-
-
-<p
-
-class="
-max-w-3xl
-mx-auto
-text-gray-400
-text-lg
-leading-relaxed
-mb-10
-">
-
-Animais selecionados,
-informações completas
-e atendimento especializado
-para sua compra.
-
-</p>
-
-
-
-
-
-
-
-
-<a
-
-href="#cavalos"
-
-class="
-gold-button
-">
-
-Ver Cavalos Disponíveis
-
-</a>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-</section>
-<!-- =================================
-CONTATO PREMIUM
-================================= -->
-
-
-<section
-
-id="contato"
-
-class="
-relative
-py-28
-bg-neutral-950
-overflow-hidden
-">
-
-
-
-
-
-<div
-
-class="
-absolute
-top-0
-right-0
-w-[500px]
-h-[500px]
-bg-yellow-500/10
-blur-[160px]
-rounded-full
-">
-
-</div>
-
-
-
-
-
-
-
-<div
-
-class="
-container
-mx-auto
-px-6
-relative
-z-10
-">
-
-
-
 
 
 <div
@@ -3847,31 +3507,7 @@ rounded-[60px]
 p-12
 md:p-20
 text-center
-border
-border-yellow-500/20
 ">
-
-
-
-
-
-<span
-
-class="
-text-yellow-500
-uppercase
-tracking-[6px]
-text-xs
-font-bold
-">
-
-Atendimento Especializado
-
-</span>
-
-
-
-
 
 
 
@@ -3881,7 +3517,6 @@ class="
 title-font
 text-5xl
 md:text-7xl
-mt-8
 mb-8
 ">
 
@@ -3893,27 +3528,19 @@ Encontrou seu cavalo ideal?
 
 
 
-
-
-
 <p
 
 class="
 text-gray-400
 text-lg
-max-w-3xl
-mx-auto
 mb-12
-leading-relaxed
 ">
 
 Entre em contato para receber
-mais informações sobre disponibilidade,
-valores e negociação do animal.
+informações sobre disponibilidade,
+valores e negociação.
 
 </p>
-
-
 
 
 
@@ -3932,31 +3559,17 @@ px-12
 py-5
 ">
 
-
 Conversar com especialista
-
 
 </a>
 
 
 
 
-
-
-
 </div>
 
 
-
-
-
-
-
 </div>
-
-
-
-
 
 
 </section>
@@ -3972,9 +3585,9 @@ Conversar com especialista
 
 
 
-<!-- =================================
-FOOTER PREMIUM
-================================= -->
+
+
+<!-- FOOTER -->
 
 
 <footer
@@ -3984,13 +3597,7 @@ bg-black
 border-t
 border-neutral-900
 py-16
-relative
-z-20
 ">
-
-
-
-
 
 
 <div
@@ -4003,9 +3610,6 @@ text-center
 ">
 
 
-
-
-
 <img
 
 src="assets/images/logo-dour.png"
@@ -4014,83 +3618,7 @@ class="
 w-36
 mx-auto
 mb-8
-hover:scale-110
-transition
-"
-
-alt="Gestor Haras">
-
-
-
-
-
-
-<div
-
-class="
-flex
-justify-center
-flex-wrap
-gap-8
-mb-8
-text-gray-400
-text-sm
-uppercase
-tracking-[3px]
 ">
-
-
-
-
-
-<a
-
-href="#inicio"
-class="hover:text-yellow-500 transition">
-
-Início
-
-</a>
-
-
-
-
-
-
-<a
-
-href="#cavalos"
-class="hover:text-yellow-500 transition">
-
-Cavalos
-
-</a>
-
-
-
-
-
-
-<a
-
-href="#contato"
-class="hover:text-yellow-500 transition">
-
-Contato
-
-</a>
-
-
-
-
-
-</div>
-
-
-
-
-
-
 
 
 <p
@@ -4104,25 +3632,15 @@ Gestor Haras ©
 
 <span id="ano"></span>
 
-
 <br>
 
-
 Cavalos premium selecionados.
-
 
 </p>
 
 
 
-
-
-
-
 </div>
-
-
-
 
 
 </footer>
@@ -4135,64 +3653,31 @@ Cavalos premium selecionados.
 
 
 
-<!-- =================================
-SCRIPTS
-================================= -->
-
-
 <script>
 
 
-/*
-========================
-LOADER
-========================
-*/
+/* LOADER */
 
+window.addEventListener("load",()=>{
 
-window.addEventListener(
-"load",
-()=>{
-
-
-const loader =
-document.getElementById(
-"loader"
-);
-
-
+const loader=document.getElementById("loader");
 
 if(loader){
 
-
 setTimeout(()=>{
-
 
 loader.style.opacity="0";
 
-
-loader.style.transition=
-"opacity .6s";
-
-
-
 setTimeout(()=>{
 
-
 loader.remove();
-
 
 },600);
 
 
-
-},1200);
-
-
+},1000);
 
 }
-
-
 
 });
 
@@ -4200,46 +3685,24 @@ loader.remove();
 
 
 
-
-
-
-
-/*
-========================
-MENU MOBILE
-========================
-*/
+/* MENU MOBILE */
 
 
 const menuBtn =
-document.getElementById(
-"menuBtn"
-);
-
+document.getElementById("menuBtn");
 
 
 const mobileMenu =
-document.getElementById(
-"mobileMenu"
-);
-
+document.getElementById("mobileMenu");
 
 
 if(menuBtn){
 
+menuBtn.onclick=()=>{
 
-menuBtn.onclick =
-()=>{
+mobileMenu.classList.toggle("hidden");
 
-
-mobileMenu.classList.toggle(
-"hidden"
-);
-
-
-
-};
-
+}
 
 }
 
@@ -4247,137 +3710,31 @@ mobileMenu.classList.toggle(
 
 
 
-document
-.querySelectorAll(
-"#mobileMenu a"
-)
-.forEach(
-(link)=>{
 
 
-link.onclick =
-()=>{
-
-
-mobileMenu.classList.add(
-"hidden"
-);
-
-
-
-};
-
-
-
-});
-
-
-
-
-
-
-
-
-
-
-
-/*
-========================
-NAVBAR SCROLL
-========================
-*/
-
-
-window.addEventListener(
-"scroll",
-()=>{
-
-
-const nav =
-document.getElementById(
-"navbar"
-);
-
-
-
-if(window.scrollY > 80){
-
-
-
-nav.classList.add(
-"bg-black/90",
-"backdrop-blur-xl",
-"shadow-lg"
-);
-
-
-
-}else{
-
-
-nav.classList.remove(
-"bg-black/90",
-"backdrop-blur-xl",
-"shadow-lg"
-);
-
-
-
-}
-
-
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-========================
-WHATSAPP
-========================
-*/
+/* WHATSAPP */
 
 
 const whatsapp =
-document.getElementById(
-"whatsappBtn"
-);
-
+document.getElementById("whatsappBtn");
 
 
 if(whatsapp){
 
 
-
-const numero =
-"5521999863078";
+const numero="5521999863078";
 
 
-
-const mensagem =
+const mensagem=
 encodeURIComponent(
-
-"Olá! Tenho interesse em comprar um cavalo premium anunciado no site."
-
+"Olá! Tenho interesse em comprar um cavalo premium."
 );
 
 
-
-whatsapp.href =
-
+whatsapp.href=
 `https://wa.me/${numero}?text=${mensagem}`;
 
 
-
 }
 
 
@@ -4386,88 +3743,10 @@ whatsapp.href =
 
 
 
+/* ANO */
 
-
-
-
-
-/*
-========================
-ANO AUTOMÁTICO
-========================
-*/
-
-
-const ano =
-document.getElementById(
-"ano"
-);
-
-
-
-if(ano){
-
-
-ano.textContent =
-new Date()
-.getFullYear();
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-========================
-FALLBACK IMAGENS
-========================
-*/
-
-
-document
-.querySelectorAll(
-"img"
-)
-.forEach(
-(img)=>{
-
-
-img.onerror =
-()=>{
-
-
-if(!img.dataset.erro){
-
-
-img.dataset.erro=true;
-
-
-img.src=
-"assets/images/sem-foto.jpg";
-
-
-
-}
-
-
-};
-
-
-
-});
-
-
+document.getElementById("ano").textContent=
+new Date().getFullYear();
 
 
 
@@ -4481,11 +3760,7 @@ img.src=
 
 
 
-<!-- =================================
-FIREBASE
-CARREGA CAVALOS
-================================= -->
-
+<!-- FIREBASE -->
 
 <script
 
@@ -4494,8 +3769,6 @@ type="module"
 src="js/cavalos.js">
 
 </script>
-
-
 
 
 
